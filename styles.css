@@ -1,0 +1,183 @@
+/* Estilo global */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("fotomoedas.jpeg");
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Cabeçalho */
+header {
+    background: #00000094;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+/* Botão Modo Escuro */
+button#modo-escuro {
+    padding: 10px 15px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button#modo-escuro:hover {
+    background-color: #0056b3;
+}
+
+/* Contêiner principal */
+.converter-container {
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+input, select {
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Botão */
+button {
+    padding: 14px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Efeito de loading no botão */
+button.loading {
+    pointer-events: none;
+    background-color: #ccc;
+}
+
+button.loading::after {
+    content: "⌛";
+    margin-left: 10px;
+    display: inline-block;
+}
+
+/* Resultado com fade-in */
+.resultado {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.resultado.show {
+    opacity: 1;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    margin-top: auto;
+    padding: 10px 0;
+    background: #00000094;
+    color: white;
+    font-size: 14px;
+}
+
+/* Modo Escuro */
+.dark-mode {
+    background-color: #00000094;
+    color: #e0e0e0;
+}
+
+.dark-mode header {
+    background-color: #00000094;
+}
+
+.dark-mode .converter-container {
+    background-color: #333;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode button {
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+.dark-mode button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.dark-mode select, .dark-mode input {
+    background-color: #444;
+    color: #fff;
+    border: 1px solid #666;
+}
+
+.dark-mode footer {
+    background-color: #00000094;
+}
+
+/* Mudanças no Modo Escuro: Texto em branco */
+.dark-mode .resultado {
+    color: #fff;  /* Resultado em branco */
+}
+
+.dark-mode label {
+    color: #fff;  /* Rótulos (labels) em branco */
+}
+
+.dark-mode input, .dark-mode select {
+    color: #fff;  /* Texto nos campos de input e select em branco */
+}
